@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Java注解概述 | ZMC Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Annotation注解也是一种类型，通过@interface关键字进行定义 一、元注解元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：1.@Retention ：保留期，说明了注解的存活时间，取值如下：（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视（2）RetentionPolicy.CLASS：保留到编译进行时，并不">
+  <meta name="description" content="Annotation注解也是一种类型，通过@interface关键字进行定义  一、元注解元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：1.@Retention ：保留期，说明了注解的存活时间，取值如下：（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视（2）RetentionPolicy.CLASS：保留到编译进行时，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java注解概述">
 <meta property="og:url" content="http://yoursite.com/2019/03/24/Java注解概述/index.html">
 <meta property="og:site_name" content="ZMC Page">
-<meta property="og:description" content="Annotation注解也是一种类型，通过@interface关键字进行定义 一、元注解元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：1.@Retention ：保留期，说明了注解的存活时间，取值如下：（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视（2）RetentionPolicy.CLASS：保留到编译进行时，并不">
+<meta property="og:description" content="Annotation注解也是一种类型，通过@interface关键字进行定义  一、元注解元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：1.@Retention ：保留期，说明了注解的存活时间，取值如下：（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视（2）RetentionPolicy.CLASS：保留到编译进行时，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-24T07:55:51.972Z">
+<meta property="og:updated_time" content="2019-03-30T11:16:51.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java注解概述">
-<meta name="twitter:description" content="Annotation注解也是一种类型，通过@interface关键字进行定义 一、元注解元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：1.@Retention ：保留期，说明了注解的存活时间，取值如下：（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视（2）RetentionPolicy.CLASS：保留到编译进行时，并不">
+<meta name="twitter:description" content="Annotation注解也是一种类型，通过@interface关键字进行定义  一、元注解元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：1.@Retention ：保留期，说明了注解的存活时间，取值如下：（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视（2）RetentionPolicy.CLASS：保留到编译进行时，">
   
     <link rel="alternative" href="/atom.xml" title="ZMC Page" type="application/atom+xml">
   
@@ -158,12 +158,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Annotation"><a href="#Annotation" class="headerlink" title="Annotation"></a>Annotation</h2><p>注解也是一种类型，通过@interface关键字进行定义</p>
-<h2 id="一、元注解"><a href="#一、元注解" class="headerlink" title="一、元注解"></a>一、元注解</h2><p>元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：<br>1.@Retention ：保留期，说明了注解的存活时间，取值如下：<br>（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视<br>（2）RetentionPolicy.CLASS：保留到编译进行时，并不会加载到jvm中<br>（3）RetentionPolicy.RUNTIME：保留到运行时，并被加载到jvm中，程序运行时可以获取到他们<br>2.@Documented：能将注解中的元素包含到javadoc文档中去<br>3.@Target：指定注解使用的目标，取值如下：<br>（1）ElementType.ANOTATION_TYPE：给一个注解进行注解<br>（2）ElementType.CONSTRUCTOR：给构造方法注解<br>（3）ElementType.FIELD：可以给属性进行注解<br>（4）ElementType.LOCAL_VARIABLE：局部变量<br>（5）ElementType.METHOD：方法<br>（6）ElementType.PACKAGE：包<br>（7）ElementType.PARAMETER：方法内的参数<br>（8）ElementType.TYPE：类型，包括类、接口、枚举<br>4.@Inherited：继承，指当父类具有此注解时，子类是否也具有<br>5.@Repeatable：可重复，当注解的值可以取多个的时候使用</p>
-<h2 id="二、注解的属性"><a href="#二、注解的属性" class="headerlink" title="二、注解的属性"></a>二、注解的属性</h2><p>注解的属性也叫成员变量，注解只有成员变量，没有方法<br>1.注解的成员变量在定义时以无参数方法的形式进行定义，方法名即成员变量的名字，返回类型即该成员变量的类型<br>2.注解中属性的默认值可以用default关键字指定，形如：int id() default:-1;<br>3.注解的属性的赋值以“value=”的形式进行，多个以“，”分隔，仅一个时可以省去“value=”，无属性时括号也可省去</p>
-<h2 id="三、预置的注解"><a href="#三、预置的注解" class="headerlink" title="三、预置的注解"></a>三、预置的注解</h2><p>1.@Deprecated：过时的元素，包括方法、类、成员变量等<br>2.@Override：提示子类中要复写父类中被此注解标记的方法<br>3.@SuppressWarnings：忽略警告<br>4.@SafeVarargs：参数安全类型注解，提醒开发者不要用参数做一些不安全的操作，它的存在会阻止编译器产生unchecked这样的警告<br>5.@FunctionalInterface：函数式接口注解，具有一个方法的普通接口叫函数式接口</p>
-<h2 id="四、注解的提取"><a href="#四、注解的提取" class="headerlink" title="四、注解的提取"></a>四、注解的提取</h2><p>1.注解的提取主要是通过反射来获取，调用class对象的getAnnotation等方法<br>2.要在运行时获取注解，注解的存续时间必须到运行时</p>
-<h2 id="五、官方解释："><a href="#五、官方解释：" class="headerlink" title="五、官方解释："></a>五、官方解释：</h2><p>注解是一系列元数据，它提供数据用来解释程序代码，但是注解并非是所解释的代码本身的一部分。注解对于代码的运行效果没有直接影响。<br>注解有许多用处，主要如下： </p>
+        <ul>
+<li><p>Annotation<br>注解也是一种类型，通过@interface关键字进行定义</p>
+</li>
+<li><p>一、元注解<br>元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：<br>1.@Retention ：保留期，说明了注解的存活时间，取值如下：<br>（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视<br>（2）RetentionPolicy.CLASS：保留到编译进行时，并不会加载到jvm中<br>（3）RetentionPolicy.RUNTIME：保留到运行时，并被加载到jvm中，程序运行时可以获取到他们<br>2.@Documented：能将注解中的元素包含到javadoc文档中去<br>3.@Target：指定注解使用的目标，取值如下：<br>（1）ElementType.ANOTATION_TYPE：给一个注解进行注解<br>（2）ElementType.CONSTRUCTOR：给构造方法注解<br>（3）ElementType.FIELD：可以给属性进行注解<br>（4）ElementType.LOCAL_VARIABLE：局部变量<br>（5）ElementType.METHOD：方法<br>（6）ElementType.PACKAGE：包<br>（7）ElementType.PARAMETER：方法内的参数<br>（8）ElementType.TYPE：类型，包括类、接口、枚举<br>4.@Inherited：继承，指当父类具有此注解时，子类是否也具有<br>5.@Repeatable：可重复，当注解的值可以取多个的时候使用</p>
+</li>
+<li><p>二、注解的属性<br>注解的属性也叫成员变量，注解只有成员变量，没有方法<br>1.注解的成员变量在定义时以无参数方法的形式进行定义，方法名即成员变量的名字，返回类型即该成员变量的类型<br>2.注解中属性的默认值可以用default关键字指定，形如：int id() default:-1;<br>3.注解的属性的赋值以“value=”的形式进行，多个以“，”分隔，仅一个时可以省去“value=”，无属性时括号也可省去</p>
+</li>
+<li><p>三、预置的注解<br>1.@Deprecated：过时的元素，包括方法、类、成员变量等<br>2.@Override：提示子类中要复写父类中被此注解标记的方法<br>3.@SuppressWarnings：忽略警告<br>4.@SafeVarargs：参数安全类型注解，提醒开发者不要用参数做一些不安全的操作，它的存在会阻止编译器产生unchecked这样的警告<br>5.@FunctionalInterface：函数式接口注解，具有一个方法的普通接口叫函数式接口</p>
+</li>
+<li><p>四、注解的提取<br>1.注解的提取主要是通过反射来获取，调用class对象的getAnnotation等方法<br>2.要在运行时获取注解，注解的存续时间必须到运行时</p>
+</li>
+<li><p>五、官方解释：<br>注解是一系列元数据，它提供数据用来解释程序代码，但是注解并非是所解释的代码本身的一部分。注解对于代码的运行效果没有直接影响。<br>注解有许多用处，主要如下： </p>
+</li>
+</ul>
 <ul>
 <li>提供信息给编译器： 编译器可以利用注解来探测错误和警告信息 </li>
 <li>编译阶段时的处理： 软件工具可以用来利用注解信息来生成代码、Html文档或者做其它相应处理。 </li>
@@ -240,6 +248,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/03/30/Java流-IO/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java流(IO)
+        
+      </div>
+    </a>
   
   
     <a href="/2019/03/16/MD5算法/" id="article-nav-older" class="article-nav-link-wrap">

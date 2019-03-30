@@ -136,6 +136,91 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java流-IO" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/30/Java流-IO/">Java流(IO)</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/30/Java流-IO/" class="archive-article-date">
+  	<time datetime="2019-03-30T11:14:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>一、流的定义、常见分类、特性：<br>1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象<br>2.按数据流向分类分为输入流和输出流<br>3.按处理数据类型的不同分为字节流和字符流<br>4.按数据来源分类：<br>（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter<br>（2）byte[]：ByteArrayInputStream, ByteArrayOutputStream<br>（3）Char[]: CharArrayReader,CharArrayWriter<br>（4）String:StringBufferInputStream, StringReader, StringWriter<br>（5）网络数据流：InputStream,OutputStream, Reader, Writer<br>5.流的特性是先进先出、顺序读取（除RandomAccessFile）、只读或只写</p>
+</li>
+<li><p>二、java IO流体系结构<br>1.流式部分<br>（1）字节流：InputStream、OutputStream<br>（2）字符流：Writer、Reader<br>2.非流式部分：File、RandomAccessFile<br>3.其他部分：与安全相关的</p>
+</li>
+<li><p>三、主要的类：</p>
+</li>
+</ul>
+<ol>
+<li>File（文件特征与管理）：用于文件或者目录的描述信息，例如生成新目录，修改文件名，删除文件，判断文件所在路径等。</li>
+<li>InputStream（二进制格式操作）：抽象类，基于字节的输入操作，是所有输入流的父类。定义了所有输入流都具有的共同特征。</li>
+<li>OutputStream（二进制格式操作）：抽象类。基于字节的输出操作。是所有输出流的父类。定义了所有输出流都具有的共同特征。<br>4.Reader（文件格式操作）：抽象类，基于字符的输入操作。</li>
+<li>Writer（文件格式操作）：抽象类，基于字符的输出操作。</li>
+<li>RandomAccessFile（随机文件操作）：一个独立的类，直接继承至Object.它的功能丰富，可以从文件的任意位置进行存取（输入输出）操作。</li>
+</ol>
+<ul>
+<li><p>四、字符流与字节流的转换与区别<br>1.字符与字节的转换通过以下两个类完成<br>（1）InputStreamReader：字节到字符的桥梁<br>（2）OutputStreamWriter：字符转成字节<br>2.字节与字符的区别如下：<br>（1）字节流没有缓冲区，是直接输出的，而字符流是输出到缓冲区的，在调用close方法关闭缓冲区才输出，或者调用flush方法立即输出<br>（2）字节流以字节为单位，字符流以字符为单位<br>（3）字节流能处理所有类型的数据，字符流只能处理字符类型的数据</p>
+</li>
+<li><p>五、常见的流对象<br>1.输入字节流（InputStream）：<br>（1）ByteArrayInputStream：    从byte数组读取数据<br>（2）StringBufferInputStream：从StringBuffer读取数据<br>（3）FileInputStream：从本地文件中读取数据<br>（4）PipedInputStream：从与其他线程共用的管道中读取数据<br>（5）ObjectInputStream：将对象转换成字节输入流，是装饰流（装饰器模式的主角），对象必须实现Serializable接口<br>（6）FilterInputStream及其子类（Data、Buffered、Pushback）：都是装饰流<br>2.输出字节流（OutputStream）：<br>（1）ByteArrayOutputStream：向byte数组写入数据<br>（2）FileOutputStream：向文件写入数据<br>（3）PipedOutputStream：向与其他线程共用的管道中写入数据<br>（4）ObjectOutputStream：对象输出流，是装饰流<br>（5）FilterOutputStream及其子类（Data、Buffered、PrintStream）：都是装饰类<br>3.字符输入流（Reader）：<br>（1）CharArrayReader：从char数组中读取数据<br>（2）StringReader：从String中读取数据<br>（3）PipedReader：从与其他线程共享的管道中读取数据<br>（4）BufferedReader：装饰类，提供缓冲<br>（5）FilterReader：是所有自定义具体装饰流的父类<br>（6）InputStreamReader：将字节流转变为字符流输入，其子类FileReader是达到此目地常用的工具类<br>4.字符输出流（Writer）：<br>（1）CharArrayWriter：向char数组写入数据<br>（2）StringWriter：向String写入数据<br>（3）PipedWriter：向与其他线程共享的管道中写入数据<br>（4）BufferedWriter：为Writer提供缓冲的装饰器流<br>（5）PrintWriter：与PrintStream的功能和使用及其相似<br>（6）OutputStreamWriter：将字节流以字符流输出，子类FileWriter也是常用的工具类</p>
+</li>
+<li><p>六、System.in和System.out：<br>1.system.in和system.out是PrintStream的实例<br>2.使用Scanner装饰System.in可以逐行读取</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/30/Java流-IO/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java注解概述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -156,12 +241,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Annotation"><a href="#Annotation" class="headerlink" title="Annotation"></a>Annotation</h2><p>注解也是一种类型，通过@interface关键字进行定义</p>
-<h2 id="一、元注解"><a href="#一、元注解" class="headerlink" title="一、元注解"></a>一、元注解</h2><p>元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：<br>1.@Retention ：保留期，说明了注解的存活时间，取值如下：<br>（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视<br>（2）RetentionPolicy.CLASS：保留到编译进行时，并不会加载到jvm中<br>（3）RetentionPolicy.RUNTIME：保留到运行时，并被加载到jvm中，程序运行时可以获取到他们<br>2.@Documented：能将注解中的元素包含到javadoc文档中去<br>3.@Target：指定注解使用的目标，取值如下：<br>（1）ElementType.ANOTATION_TYPE：给一个注解进行注解<br>（2）ElementType.CONSTRUCTOR：给构造方法注解<br>（3）ElementType.FIELD：可以给属性进行注解<br>（4）ElementType.LOCAL_VARIABLE：局部变量<br>（5）ElementType.METHOD：方法<br>（6）ElementType.PACKAGE：包<br>（7）ElementType.PARAMETER：方法内的参数<br>（8）ElementType.TYPE：类型，包括类、接口、枚举<br>4.@Inherited：继承，指当父类具有此注解时，子类是否也具有<br>5.@Repeatable：可重复，当注解的值可以取多个的时候使用</p>
-<h2 id="二、注解的属性"><a href="#二、注解的属性" class="headerlink" title="二、注解的属性"></a>二、注解的属性</h2><p>注解的属性也叫成员变量，注解只有成员变量，没有方法<br>1.注解的成员变量在定义时以无参数方法的形式进行定义，方法名即成员变量的名字，返回类型即该成员变量的类型<br>2.注解中属性的默认值可以用default关键字指定，形如：int id() default:-1;<br>3.注解的属性的赋值以“value=”的形式进行，多个以“，”分隔，仅一个时可以省去“value=”，无属性时括号也可省去</p>
-<h2 id="三、预置的注解"><a href="#三、预置的注解" class="headerlink" title="三、预置的注解"></a>三、预置的注解</h2><p>1.@Deprecated：过时的元素，包括方法、类、成员变量等<br>2.@Override：提示子类中要复写父类中被此注解标记的方法<br>3.@SuppressWarnings：忽略警告<br>4.@SafeVarargs：参数安全类型注解，提醒开发者不要用参数做一些不安全的操作，它的存在会阻止编译器产生unchecked这样的警告<br>5.@FunctionalInterface：函数式接口注解，具有一个方法的普通接口叫函数式接口</p>
-<h2 id="四、注解的提取"><a href="#四、注解的提取" class="headerlink" title="四、注解的提取"></a>四、注解的提取</h2><p>1.注解的提取主要是通过反射来获取，调用class对象的getAnnotation等方法<br>2.要在运行时获取注解，注解的存续时间必须到运行时</p>
-<h2 id="五、官方解释："><a href="#五、官方解释：" class="headerlink" title="五、官方解释："></a>五、官方解释：</h2><p>注解是一系列元数据，它提供数据用来解释程序代码，但是注解并非是所解释的代码本身的一部分。注解对于代码的运行效果没有直接影响。<br>注解有许多用处，主要如下： </p>
+        <ul>
+<li><p>Annotation<br>注解也是一种类型，通过@interface关键字进行定义</p>
+</li>
+<li><p>一、元注解<br>元注解就是可以注解到注解上的注解，用于设定注解的各种属性，取值分五种：<br>1.@Retention ：保留期，说明了注解的存活时间，取值如下：<br>（1）RetentionPolicy.SOURCE：注解只保留在源码阶段，编译器在编译时它将被丢弃忽视<br>（2）RetentionPolicy.CLASS：保留到编译进行时，并不会加载到jvm中<br>（3）RetentionPolicy.RUNTIME：保留到运行时，并被加载到jvm中，程序运行时可以获取到他们<br>2.@Documented：能将注解中的元素包含到javadoc文档中去<br>3.@Target：指定注解使用的目标，取值如下：<br>（1）ElementType.ANOTATION_TYPE：给一个注解进行注解<br>（2）ElementType.CONSTRUCTOR：给构造方法注解<br>（3）ElementType.FIELD：可以给属性进行注解<br>（4）ElementType.LOCAL_VARIABLE：局部变量<br>（5）ElementType.METHOD：方法<br>（6）ElementType.PACKAGE：包<br>（7）ElementType.PARAMETER：方法内的参数<br>（8）ElementType.TYPE：类型，包括类、接口、枚举<br>4.@Inherited：继承，指当父类具有此注解时，子类是否也具有<br>5.@Repeatable：可重复，当注解的值可以取多个的时候使用</p>
+</li>
+<li><p>二、注解的属性<br>注解的属性也叫成员变量，注解只有成员变量，没有方法<br>1.注解的成员变量在定义时以无参数方法的形式进行定义，方法名即成员变量的名字，返回类型即该成员变量的类型<br>2.注解中属性的默认值可以用default关键字指定，形如：int id() default:-1;<br>3.注解的属性的赋值以“value=”的形式进行，多个以“，”分隔，仅一个时可以省去“value=”，无属性时括号也可省去</p>
+</li>
+<li><p>三、预置的注解<br>1.@Deprecated：过时的元素，包括方法、类、成员变量等<br>2.@Override：提示子类中要复写父类中被此注解标记的方法<br>3.@SuppressWarnings：忽略警告<br>4.@SafeVarargs：参数安全类型注解，提醒开发者不要用参数做一些不安全的操作，它的存在会阻止编译器产生unchecked这样的警告<br>5.@FunctionalInterface：函数式接口注解，具有一个方法的普通接口叫函数式接口</p>
+</li>
+<li><p>四、注解的提取<br>1.注解的提取主要是通过反射来获取，调用class对象的getAnnotation等方法<br>2.要在运行时获取注解，注解的存续时间必须到运行时</p>
+</li>
+<li><p>五、官方解释：<br>注解是一系列元数据，它提供数据用来解释程序代码，但是注解并非是所解释的代码本身的一部分。注解对于代码的运行效果没有直接影响。<br>注解有许多用处，主要如下： </p>
+</li>
+</ul>
 <ul>
 <li>提供信息给编译器： 编译器可以利用注解来探测错误和警告信息 </li>
 <li>编译阶段时的处理： 软件工具可以用来利用注解信息来生成代码、Html文档或者做其它相应处理。 </li>

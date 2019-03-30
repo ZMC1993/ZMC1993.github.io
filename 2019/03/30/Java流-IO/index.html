@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | ZMC Page</title>
+  <title>Java流(IO) | ZMC Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ZMC Page">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="一、流的定义、常见分类、特性：1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象2.按数据流向分类分为输入流和输出流3.按处理数据类型的不同分为字节流和字符流4.按数据来源分类：（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter（2）byte[]：ByteArra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java流(IO)">
+<meta property="og:url" content="http://yoursite.com/2019/03/30/Java流-IO/index.html">
 <meta property="og:site_name" content="ZMC Page">
+<meta property="og:description" content="一、流的定义、常见分类、特性：1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象2.按数据流向分类分为输入流和输出流3.按处理数据类型的不同分为字节流和字符流4.按数据来源分类：（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter（2）byte[]：ByteArra">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-30T11:16:21.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZMC Page">
+<meta name="twitter:title" content="Java流(IO)">
+<meta name="twitter:description" content="一、流的定义、常见分类、特性：1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象2.按数据流向分类分为输入流和输出流3.按处理数据类型的不同分为字节流和字符流4.按数据来源分类：（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter（2）byte[]：ByteArra">
   
     <link rel="alternative" href="/atom.xml" title="ZMC Page" type="application/atom+xml">
   
@@ -134,265 +138,157 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java流-IO" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java流(IO)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/30/Java流-IO/" class="archive-article-date">
+
+        
+        <a href="/2019/03/30/Java流-IO/" class="archive-article-date">
   	<time datetime="2019-03-30T11:14:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/30/Java流-IO/">Java流(IO)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>一、流的定义、常见分类、特性：<br>1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象<br>2.按数据流向分类分为输入流和输出流<br>3.按处理数据类型的不同分为字节流和字符流<br>4.按数据来源分类：<br>（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter<br>（2）byte[]：ByteArrayInputStream, ByteArrayOutputStream<br>（3）Char[]: CharArrayReader,CharArrayWriter<br>（4）String:StringBufferInputStream, StringReader, StringWriter<br>（5）网络数据流：InputStream,OutputStream, Reader, Writer<br>5.流的特性是先进先出、顺序读取（除RandomAccessFile）、只读或只写</p>
+</li>
+<li><p>二、java IO流体系结构<br>1.流式部分<br>（1）字节流：InputStream、OutputStream<br>（2）字符流：Writer、Reader<br>2.非流式部分：File、RandomAccessFile<br>3.其他部分：与安全相关的</p>
+</li>
+<li><p>三、主要的类：</p>
+</li>
+</ul>
+<ol>
+<li>File（文件特征与管理）：用于文件或者目录的描述信息，例如生成新目录，修改文件名，删除文件，判断文件所在路径等。</li>
+<li>InputStream（二进制格式操作）：抽象类，基于字节的输入操作，是所有输入流的父类。定义了所有输入流都具有的共同特征。</li>
+<li>OutputStream（二进制格式操作）：抽象类。基于字节的输出操作。是所有输出流的父类。定义了所有输出流都具有的共同特征。<br>4.Reader（文件格式操作）：抽象类，基于字符的输入操作。</li>
+<li>Writer（文件格式操作）：抽象类，基于字符的输出操作。</li>
+<li>RandomAccessFile（随机文件操作）：一个独立的类，直接继承至Object.它的功能丰富，可以从文件的任意位置进行存取（输入输出）操作。</li>
+</ol>
+<ul>
+<li><p>四、字符流与字节流的转换与区别<br>1.字符与字节的转换通过以下两个类完成<br>（1）InputStreamReader：字节到字符的桥梁<br>（2）OutputStreamWriter：字符转成字节<br>2.字节与字符的区别如下：<br>（1）字节流没有缓冲区，是直接输出的，而字符流是输出到缓冲区的，在调用close方法关闭缓冲区才输出，或者调用flush方法立即输出<br>（2）字节流以字节为单位，字符流以字符为单位<br>（3）字节流能处理所有类型的数据，字符流只能处理字符类型的数据</p>
+</li>
+<li><p>五、常见的流对象<br>1.输入字节流（InputStream）：<br>（1）ByteArrayInputStream：    从byte数组读取数据<br>（2）StringBufferInputStream：从StringBuffer读取数据<br>（3）FileInputStream：从本地文件中读取数据<br>（4）PipedInputStream：从与其他线程共用的管道中读取数据<br>（5）ObjectInputStream：将对象转换成字节输入流，是装饰流（装饰器模式的主角），对象必须实现Serializable接口<br>（6）FilterInputStream及其子类（Data、Buffered、Pushback）：都是装饰流<br>2.输出字节流（OutputStream）：<br>（1）ByteArrayOutputStream：向byte数组写入数据<br>（2）FileOutputStream：向文件写入数据<br>（3）PipedOutputStream：向与其他线程共用的管道中写入数据<br>（4）ObjectOutputStream：对象输出流，是装饰流<br>（5）FilterOutputStream及其子类（Data、Buffered、PrintStream）：都是装饰类<br>3.字符输入流（Reader）：<br>（1）CharArrayReader：从char数组中读取数据<br>（2）StringReader：从String中读取数据<br>（3）PipedReader：从与其他线程共享的管道中读取数据<br>（4）BufferedReader：装饰类，提供缓冲<br>（5）FilterReader：是所有自定义具体装饰流的父类<br>（6）InputStreamReader：将字节流转变为字符流输入，其子类FileReader是达到此目地常用的工具类<br>4.字符输出流（Writer）：<br>（1）CharArrayWriter：向char数组写入数据<br>（2）StringWriter：向String写入数据<br>（3）PipedWriter：向与其他线程共享的管道中写入数据<br>（4）BufferedWriter：为Writer提供缓冲的装饰器流<br>（5）PrintWriter：与PrintStream的功能和使用及其相似<br>（6）OutputStreamWriter：将字节流以字符流输出，子类FileWriter也是常用的工具类</p>
+</li>
+<li><p>六、System.in和System.out：<br>1.system.in和system.out是PrintStream的实例<br>2.使用Scanner装饰System.in可以逐行读取</p>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/30/Java流-IO/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/24/Java注解概述/" class="archive-article-date">
-  	<time datetime="2019-03-24T07:53:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/24/Java注解概述/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java注解概述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/24/Java注解概述/">Java注解概述</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/MD5算法/" class="archive-article-date">
-  	<time datetime="2019-03-16T13:43:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/MD5算法/">MD5算法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/B-及B-树/" class="archive-article-date">
-  	<time datetime="2019-03-07T12:48:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/B-及B-树/">B-及B+树</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/AES算法/" class="archive-article-date">
-  	<time datetime="2019-03-07T12:45:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/AES算法/">AES算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/快速排序/" class="archive-article-date">
-  	<time datetime="2019-03-07T12:40:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/快速排序/">快速排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/虚拟机中安装JDK/" class="archive-article-date">
-  	<time datetime="2019-03-07T12:36:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/虚拟机中安装JDK/">虚拟机中安装JDK</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/Win10家庭版远程桌面错误解决/" class="archive-article-date">
-  	<time datetime="2019-03-07T12:34:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/Win10家庭版远程桌面错误解决/">Win10家庭版远程桌面错误解决</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/07/Markdown基础语法/" class="archive-article-date">
-  	<time datetime="2019-03-07T12:30:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/07/Markdown基础语法/">Markdown基础语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -415,8 +311,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
