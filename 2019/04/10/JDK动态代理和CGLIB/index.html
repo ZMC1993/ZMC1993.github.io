@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java流(IO) | ZMC Page</title>
+  <title>JDK动态代理和CGLIB | ZMC Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、流的定义、常见分类、特性：1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象2.按数据流向分类分为输入流和输出流3.按处理数据类型的不同分为字节流和字符流4.按数据来源分类：（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter（2）byte[]：ByteArra">
+  <meta name="description" content="一、概述1.1 代理模式概述代理模式是常用的java设计模式，他的特征是代理类与委托类有同样的接口，代理类主要负责为委托类预处理消息、过滤消息、把消息转发给委托类，以及事后处理消息等。代理类与委托类之间通常会存在关联关系，一个代理类的对象与一个委托类的对象关联，代理类的对象本身并不真正实现服务，而是通过调用委托类的对象的相关方法，来提供特定的服务。 二、JDK代理2.1 JDK动态代理相关类以下类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java流(IO)">
-<meta property="og:url" content="http://yoursite.com/2019/03/30/Java流-IO/index.html">
+<meta property="og:title" content="JDK动态代理和CGLIB">
+<meta property="og:url" content="http://yoursite.com/2019/04/10/JDK动态代理和CGLIB/index.html">
 <meta property="og:site_name" content="ZMC Page">
-<meta property="og:description" content="一、流的定义、常见分类、特性：1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象2.按数据流向分类分为输入流和输出流3.按处理数据类型的不同分为字节流和字符流4.按数据来源分类：（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter（2）byte[]：ByteArra">
+<meta property="og:description" content="一、概述1.1 代理模式概述代理模式是常用的java设计模式，他的特征是代理类与委托类有同样的接口，代理类主要负责为委托类预处理消息、过滤消息、把消息转发给委托类，以及事后处理消息等。代理类与委托类之间通常会存在关联关系，一个代理类的对象与一个委托类的对象关联，代理类的对象本身并不真正实现服务，而是通过调用委托类的对象的相关方法，来提供特定的服务。 二、JDK代理2.1 JDK动态代理相关类以下类">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-30T11:16:21.390Z">
+<meta property="og:updated_time" content="2019-04-09T23:19:44.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java流(IO)">
-<meta name="twitter:description" content="一、流的定义、常见分类、特性：1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象2.按数据流向分类分为输入流和输出流3.按处理数据类型的不同分为字节流和字符流4.按数据来源分类：（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter（2）byte[]：ByteArra">
+<meta name="twitter:title" content="JDK动态代理和CGLIB">
+<meta name="twitter:description" content="一、概述1.1 代理模式概述代理模式是常用的java设计模式，他的特征是代理类与委托类有同样的接口，代理类主要负责为委托类预处理消息、过滤消息、把消息转发给委托类，以及事后处理消息等。代理类与委托类之间通常会存在关联关系，一个代理类的对象与一个委托类的对象关联，代理类的对象本身并不真正实现服务，而是通过调用委托类的对象的相关方法，来提供特定的服务。 二、JDK代理2.1 JDK动态代理相关类以下类">
   
     <link rel="alternative" href="/atom.xml" title="ZMC Page" type="application/atom+xml">
   
@@ -138,48 +138,127 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java流-IO" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JDK动态代理和CGLIB" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java流(IO)
+      JDK动态代理和CGLIB
     </h1>
   
 
         
-        <a href="/2019/03/30/Java流-IO/" class="archive-article-date">
-  	<time datetime="2019-03-30T11:14:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-30</time>
+        <a href="/2019/04/10/JDK动态代理和CGLIB/" class="archive-article-date">
+  	<time datetime="2019-04-09T23:17:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>一、流的定义、常见分类、特性：<br>1.流是指一系列的数据传输，代表任何有能力产出数据的数据源对象或者是有能力接受数据的接收端对象<br>2.按数据流向分类分为输入流和输出流<br>3.按处理数据类型的不同分为字节流和字符流<br>4.按数据来源分类：<br>（1）File（文件）： FileInputStream, FileOutputStream, FileReader, FileWriter<br>（2）byte[]：ByteArrayInputStream, ByteArrayOutputStream<br>（3）Char[]: CharArrayReader,CharArrayWriter<br>（4）String:StringBufferInputStream, StringReader, StringWriter<br>（5）网络数据流：InputStream,OutputStream, Reader, Writer<br>5.流的特性是先进先出、顺序读取（除RandomAccessFile）、只读或只写</p>
-</li>
-<li><p>二、java IO流体系结构<br>1.流式部分<br>（1）字节流：InputStream、OutputStream<br>（2）字符流：Writer、Reader<br>2.非流式部分：File、RandomAccessFile<br>3.其他部分：与安全相关的</p>
-</li>
-<li><p>三、主要的类：</p>
-</li>
+        <h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><h4 id="1-1-代理模式概述"><a href="#1-1-代理模式概述" class="headerlink" title="1.1 代理模式概述"></a>1.1 代理模式概述</h4><p>代理模式是常用的java设计模式，他的特征是代理类与委托类有同样的接口，代理类主要负责为委托类预处理消息、过滤消息、把消息转发给委托类，以及事后处理消息等。代理类与委托类之间通常会存在关联关系，一个代理类的对象与一个委托类的对象关联，代理类的对象本身并不真正实现服务，而是通过调用委托类的对象的相关方法，来提供特定的服务。</p>
+<h2 id="二、JDK代理"><a href="#二、JDK代理" class="headerlink" title="二、JDK代理"></a>二、JDK代理</h2><h4 id="2-1-JDK动态代理相关类"><a href="#2-1-JDK动态代理相关类" class="headerlink" title="2.1 JDK动态代理相关类"></a>2.1 JDK动态代理相关类</h4><p>以下类都在java.lang.reflect包中</p>
+<p>1.InvocationHandler接口：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface InvocationHandler &#123; </span><br><span class="line">public Object invoke(Object proxy,Method method,Object[] args) throws Throwable; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.Proxy类是专门完成代理的操作类，可以通过此类为一个或多个接口动态地生成实现类，此类提供了如下的操作方法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public static Object newProxyInstance(ClassLoader loader, Class&lt;?&gt;[] interfaces, InvocationHandler h) throws IllegalArgumentException</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-2-JDK代理实现的先决条件"><a href="#2-2-JDK代理实现的先决条件" class="headerlink" title="2.2 JDK代理实现的先决条件"></a>2.2 JDK代理实现的先决条件</h4><ul>
+<li>必须实现InvocationHandler接口</li>
+<li>使用Proxy.newProxyInstance产生代理对象</li>
+<li>被代理的对象必须要实现接口<h4 id="2-3-使用JDK代理的步骤"><a href="#2-3-使用JDK代理的步骤" class="headerlink" title="2.3 使用JDK代理的步骤"></a>2.3 使用JDK代理的步骤</h4></li>
+<li>通过实现InvocationHandler接口来自定义自己的InvocationHandler，并在invoke方法中实现自己的代理调用逻辑</li>
+<li>通过Proxy.getProxyClass获得动态代理类</li>
+<li>通过反射机制获得代理类的构造方法，方法签名为getConstructor(InvocationHandler.class)</li>
+<li>通过构造函数获得代理对象并将自定义的InvocationHandler实例对象传为参数传入</li>
+<li>通过代理对象调用目标方法；</li>
+</ul>
+<h2 id="三、CGLIB代理"><a href="#三、CGLIB代理" class="headerlink" title="三、CGLIB代理"></a>三、CGLIB代理</h2><h4 id="3-1-原理概述"><a href="#3-1-原理概述" class="headerlink" title="3.1 原理概述"></a>3.1 原理概述</h4><ul>
+<li>JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理，cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理。 </li>
+<li>CGLIB(Code Generation Library)是一个开源项目！是一个强大的，高性能，高质量的Code生成类库，它可以在运行期扩展Java类与实现Java接口。Hibernate用它来实现PO(Persistent Object 持久化对象)字节码的动态生成。</li>
+<li>CGLIB是一个强大的高性能的代码生成包。它广泛的被许多AOP的框架使用，例如Spring AOP为他们提供方法的interception（拦截）。CGLIB包的底层是通过使用一个小而快的字节码处理框架ASM，来转换字节码并生成新的类。<h4 id="3-2-CGLIB库"><a href="#3-2-CGLIB库" class="headerlink" title="3.2 CGLIB库"></a>3.2 CGLIB库</h4></li>
+<li>aspectjrt-xxx.jar</li>
+<li>aspectjweaver-xxx.jar</li>
+<li>cglib-nodep-xxx.jar<h4 id="3-3-使用示例"><a href="#3-3-使用示例" class="headerlink" title="3.3 使用示例"></a>3.3 使用示例</h4></li>
 </ul>
 <ol>
-<li>File（文件特征与管理）：用于文件或者目录的描述信息，例如生成新目录，修改文件名，删除文件，判断文件所在路径等。</li>
-<li>InputStream（二进制格式操作）：抽象类，基于字节的输入操作，是所有输入流的父类。定义了所有输入流都具有的共同特征。</li>
-<li>OutputStream（二进制格式操作）：抽象类。基于字节的输出操作。是所有输出流的父类。定义了所有输出流都具有的共同特征。<br>4.Reader（文件格式操作）：抽象类，基于字符的输入操作。</li>
-<li>Writer（文件格式操作）：抽象类，基于字符的输出操作。</li>
-<li>RandomAccessFile（随机文件操作）：一个独立的类，直接继承至Object.它的功能丰富，可以从文件的任意位置进行存取（输入输出）操作。</li>
+<li><p>实现一个业务类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class HelloService &#123;</span><br><span class="line"> </span><br><span class="line">    public HelloService() &#123;</span><br><span class="line">        System.out.println(&quot;HelloService构造&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    /**</span><br><span class="line">     * 该方法不能被子类覆盖,Cglib是无法代理final修饰的方法的</span><br><span class="line">     */</span><br><span class="line">    final public String sayOthers(String name) &#123;</span><br><span class="line">        System.out.println(&quot;HelloService:sayOthers&gt;&gt;&quot;+name);</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    public void sayHello() &#123;</span><br><span class="line">        System.out.println(&quot;HelloService:sayHello&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义MethodInterceptor</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import net.sf.cglib.proxy.MethodInterceptor;</span><br><span class="line">import net.sf.cglib.proxy.MethodProxy;</span><br><span class="line"> </span><br><span class="line">import java.lang.reflect.Method;</span><br><span class="line"> </span><br><span class="line">/**</span><br><span class="line"> * 自定义MethodInterceptor</span><br><span class="line"> */</span><br><span class="line">public class MyMethodInterceptor implements MethodInterceptor&#123;</span><br><span class="line"> </span><br><span class="line">    /**</span><br><span class="line">     * sub：cglib生成的代理对象</span><br><span class="line">     * method：被代理对象方法</span><br><span class="line">     * objects：方法入参</span><br><span class="line">     * methodProxy: 代理方法</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    public Object intercept(Object sub, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable &#123;</span><br><span class="line">        System.out.println(&quot;======插入前置通知======&quot;);</span><br><span class="line">        Object object = methodProxy.invokeSuper(sub, objects);</span><br><span class="line">        System.out.println(&quot;======插入后者通知======&quot;);</span><br><span class="line">        return object;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<p>3.生成CGLIB代理对象调用目标方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import net.sf.cglib.core.DebuggingClassWriter;</span><br><span class="line">import net.sf.cglib.proxy.Enhancer;</span><br><span class="line"> </span><br><span class="line">public class Client &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 代理类class文件存入本地磁盘方便我们反编译查看源码</span><br><span class="line">        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, &quot;D:\\code&quot;);</span><br><span class="line">        // 通过CGLIB动态代理获取代理对象的过程</span><br><span class="line">        Enhancer enhancer = new Enhancer();</span><br><span class="line">        // 设置enhancer对象的父类</span><br><span class="line">        enhancer.setSuperclass(HelloService.class);</span><br><span class="line">        // 设置enhancer的回调对象</span><br><span class="line">        enhancer.setCallback(new MyMethodInterceptor());</span><br><span class="line">        // 创建代理对象</span><br><span class="line">        HelloService proxy= (HelloService)enhancer.create();</span><br><span class="line">        // 通过代理对象调用目标方法</span><br><span class="line">        proxy.sayHello();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="四、JDK动态代理和CGLIB的区别"><a href="#四、JDK动态代理和CGLIB的区别" class="headerlink" title="四、JDK动态代理和CGLIB的区别"></a>四、JDK动态代理和CGLIB的区别</h2><h4 id="4-1-Spring如何选择用JDK还是CGLiB"><a href="#4-1-Spring如何选择用JDK还是CGLiB" class="headerlink" title="4.1 Spring如何选择用JDK还是CGLiB"></a>4.1 Spring如何选择用JDK还是CGLiB</h4><ul>
+<li>当Bean实现接口时，Spring就会用JDK的动态代理。</li>
+<li>当Bean没有实现接口时，Spring使用CGlib是实现。</li>
+<li>可以强制使用CGlib（在spring配置中加入&lt;aop:aspectj-autoproxy proxy-target-class=”true”/&gt;）</li>
+</ul>
+<h4 id="4-2-字节码生成的区别"><a href="#4-2-字节码生成的区别" class="headerlink" title="4.2 字节码生成的区别"></a>4.2 字节码生成的区别</h4><ul>
+<li>JDK动态代理只能对实现了接口的类生成代理，而不能针对类。</li>
+<li>CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法，并覆盖其中方法实现增强，但是因为采用的是继承，所以该类或方法最好不要声明成final，对于final类或方法，是无法继承的。</li>
+</ul>
+<h4 id="4-3-效率比较"><a href="#4-3-效率比较" class="headerlink" title="4.3 效率比较"></a>4.3 效率比较</h4><ul>
+<li>使用CGLib实现动态代理，CGLib底层采用ASM字节码生成框架，使用字节码技术生成代理类，在jdk6之前比使用Java反射效率要高。唯一需要注意的是，CGLib不能对声明为final的方法进行代理，因为CGLib原理是动态生成被代理类的子类。</li>
+<li>在jdk6、jdk7、jdk8逐步对JDK动态代理优化之后，在调用次数较少的情况下，JDK代理效率高于CGLIB代理效率，只有当进行大量调用的时候，jdk6和jdk7比CGLIB代理效率低一点，但是到jdk8的时候，jdk代理效率高于CGLIB代理，<br>总之，每一次jdk版本升级，jdk代理效率都得到提升，而CGLIB代理消息确有点跟不上步伐。</li>
+</ul>
+<hr>
+<p>参考文章：</p>
 <ul>
-<li><p>四、字符流与字节流的转换与区别<br>1.字符与字节的转换通过以下两个类完成<br>（1）InputStreamReader：字节到字符的桥梁<br>（2）OutputStreamWriter：字符转成字节<br>2.字节与字符的区别如下：<br>（1）字节流没有缓冲区，是直接输出的，而字符流是输出到缓冲区的，在调用close方法关闭缓冲区才输出，或者调用flush方法立即输出<br>（2）字节流以字节为单位，字符流以字符为单位<br>（3）字节流能处理所有类型的数据，字符流只能处理字符类型的数据</p>
+<li><a href="https://blog.csdn.net/yhl_jxy/article/details/80635012" target="_blank" rel="noopener">JDK和CGLIB动态代理区别</a></li>
+<li><a href="https://blog.csdn.net/yhl_jxy/article/details/80633194" target="_blank" rel="noopener">CGLIB动态代理实现原理</a></li>
+<li><a href="https://blog.csdn.net/yhl_jxy/article/details/80586785" target="_blank" rel="noopener">JDK动态代理实现原理(jdk8)</a></li>
+<li><a href="http://www.cnblogs.com/jqyp/archive/2010/08/20/1805041.html" target="_blank" rel="noopener">java动态代理（JDK和cglib）</a>## 一、概述<h4 id="1-1-代理模式概述-1"><a href="#1-1-代理模式概述-1" class="headerlink" title="1.1 代理模式概述"></a>1.1 代理模式概述</h4>代理模式是常用的java设计模式，他的特征是代理类与委托类有同样的接口，代理类主要负责为委托类预处理消息、过滤消息、把消息转发给委托类，以及事后处理消息等。代理类与委托类之间通常会存在关联关系，一个代理类的对象与一个委托类的对象关联，代理类的对象本身并不真正实现服务，而是通过调用委托类的对象的相关方法，来提供特定的服务。<h2 id="二、JDK代理-1"><a href="#二、JDK代理-1" class="headerlink" title="二、JDK代理"></a>二、JDK代理</h2><h4 id="2-1-JDK动态代理相关类-1"><a href="#2-1-JDK动态代理相关类-1" class="headerlink" title="2.1 JDK动态代理相关类"></a>2.1 JDK动态代理相关类</h4>以下类都在java.lang.reflect包中</li>
+</ul>
+<p>1.InvocationHandler接口：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface InvocationHandler &#123; </span><br><span class="line">public Object invoke(Object proxy,Method method,Object[] args) throws Throwable; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.Proxy类是专门完成代理的操作类，可以通过此类为一个或多个接口动态地生成实现类，此类提供了如下的操作方法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public static Object newProxyInstance(ClassLoader loader, Class&lt;?&gt;[] interfaces, InvocationHandler h) throws IllegalArgumentException</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-2-JDK代理实现的先决条件-1"><a href="#2-2-JDK代理实现的先决条件-1" class="headerlink" title="2.2 JDK代理实现的先决条件"></a>2.2 JDK代理实现的先决条件</h4><ul>
+<li>必须实现InvocationHandler接口</li>
+<li>使用Proxy.newProxyInstance产生代理对象</li>
+<li>被代理的对象必须要实现接口<h4 id="2-3-使用JDK代理的步骤-1"><a href="#2-3-使用JDK代理的步骤-1" class="headerlink" title="2.3 使用JDK代理的步骤"></a>2.3 使用JDK代理的步骤</h4></li>
+<li>通过实现InvocationHandler接口来自定义自己的InvocationHandler，并在invoke方法中实现自己的代理调用逻辑</li>
+<li>通过Proxy.getProxyClass获得动态代理类</li>
+<li>通过反射机制获得代理类的构造方法，方法签名为getConstructor(InvocationHandler.class)</li>
+<li>通过构造函数获得代理对象并将自定义的InvocationHandler实例对象传为参数传入</li>
+<li>通过代理对象调用目标方法；</li>
+</ul>
+<h2 id="三、CGLIB代理-1"><a href="#三、CGLIB代理-1" class="headerlink" title="三、CGLIB代理"></a>三、CGLIB代理</h2><h4 id="3-1-原理概述-1"><a href="#3-1-原理概述-1" class="headerlink" title="3.1 原理概述"></a>3.1 原理概述</h4><ul>
+<li>JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理，cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理。 </li>
+<li>CGLIB(Code Generation Library)是一个开源项目！是一个强大的，高性能，高质量的Code生成类库，它可以在运行期扩展Java类与实现Java接口。Hibernate用它来实现PO(Persistent Object 持久化对象)字节码的动态生成。</li>
+<li>CGLIB是一个强大的高性能的代码生成包。它广泛的被许多AOP的框架使用，例如Spring AOP为他们提供方法的interception（拦截）。CGLIB包的底层是通过使用一个小而快的字节码处理框架ASM，来转换字节码并生成新的类。<h4 id="3-2-CGLIB库-1"><a href="#3-2-CGLIB库-1" class="headerlink" title="3.2 CGLIB库"></a>3.2 CGLIB库</h4></li>
+<li>aspectjrt-xxx.jar</li>
+<li>aspectjweaver-xxx.jar</li>
+<li>cglib-nodep-xxx.jar<h4 id="3-3-使用示例-1"><a href="#3-3-使用示例-1" class="headerlink" title="3.3 使用示例"></a>3.3 使用示例</h4></li>
+</ul>
+<ol>
+<li><p>实现一个业务类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class HelloService &#123;</span><br><span class="line"> </span><br><span class="line">    public HelloService() &#123;</span><br><span class="line">        System.out.println(&quot;HelloService构造&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    /**</span><br><span class="line">     * 该方法不能被子类覆盖,Cglib是无法代理final修饰的方法的</span><br><span class="line">     */</span><br><span class="line">    final public String sayOthers(String name) &#123;</span><br><span class="line">        System.out.println(&quot;HelloService:sayOthers&gt;&gt;&quot;+name);</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    public void sayHello() &#123;</span><br><span class="line">        System.out.println(&quot;HelloService:sayHello&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>五、常见的流对象<br>1.输入字节流（InputStream）：<br>（1）ByteArrayInputStream：    从byte数组读取数据<br>（2）StringBufferInputStream：从StringBuffer读取数据<br>（3）FileInputStream：从本地文件中读取数据<br>（4）PipedInputStream：从与其他线程共用的管道中读取数据<br>（5）ObjectInputStream：将对象转换成字节输入流，是装饰流（装饰器模式的主角），对象必须实现Serializable接口<br>（6）FilterInputStream及其子类（Data、Buffered、Pushback）：都是装饰流<br>2.输出字节流（OutputStream）：<br>（1）ByteArrayOutputStream：向byte数组写入数据<br>（2）FileOutputStream：向文件写入数据<br>（3）PipedOutputStream：向与其他线程共用的管道中写入数据<br>（4）ObjectOutputStream：对象输出流，是装饰流<br>（5）FilterOutputStream及其子类（Data、Buffered、PrintStream）：都是装饰类<br>3.字符输入流（Reader）：<br>（1）CharArrayReader：从char数组中读取数据<br>（2）StringReader：从String中读取数据<br>（3）PipedReader：从与其他线程共享的管道中读取数据<br>（4）BufferedReader：装饰类，提供缓冲<br>（5）FilterReader：是所有自定义具体装饰流的父类<br>（6）InputStreamReader：将字节流转变为字符流输入，其子类FileReader是达到此目地常用的工具类<br>4.字符输出流（Writer）：<br>（1）CharArrayWriter：向char数组写入数据<br>（2）StringWriter：向String写入数据<br>（3）PipedWriter：向与其他线程共享的管道中写入数据<br>（4）BufferedWriter：为Writer提供缓冲的装饰器流<br>（5）PrintWriter：与PrintStream的功能和使用及其相似<br>（6）OutputStreamWriter：将字节流以字符流输出，子类FileWriter也是常用的工具类</p>
+<li><p>自定义MethodInterceptor</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import net.sf.cglib.proxy.MethodInterceptor;</span><br><span class="line">import net.sf.cglib.proxy.MethodProxy;</span><br><span class="line"> </span><br><span class="line">import java.lang.reflect.Method;</span><br><span class="line"> </span><br><span class="line">/**</span><br><span class="line"> * 自定义MethodInterceptor</span><br><span class="line"> */</span><br><span class="line">public class MyMethodInterceptor implements MethodInterceptor&#123;</span><br><span class="line"> </span><br><span class="line">    /**</span><br><span class="line">     * sub：cglib生成的代理对象</span><br><span class="line">     * method：被代理对象方法</span><br><span class="line">     * objects：方法入参</span><br><span class="line">     * methodProxy: 代理方法</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    public Object intercept(Object sub, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable &#123;</span><br><span class="line">        System.out.println(&quot;======插入前置通知======&quot;);</span><br><span class="line">        Object object = methodProxy.invokeSuper(sub, objects);</span><br><span class="line">        System.out.println(&quot;======插入后者通知======&quot;);</span><br><span class="line">        return object;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>六、System.in和System.out：<br>1.system.in和system.out是PrintStream的实例<br>2.使用Scanner装饰System.in可以逐行读取</p>
-</li>
+</ol>
+<p>3.生成CGLIB代理对象调用目标方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import net.sf.cglib.core.DebuggingClassWriter;</span><br><span class="line">import net.sf.cglib.proxy.Enhancer;</span><br><span class="line"> </span><br><span class="line">public class Client &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 代理类class文件存入本地磁盘方便我们反编译查看源码</span><br><span class="line">        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, &quot;D:\\code&quot;);</span><br><span class="line">        // 通过CGLIB动态代理获取代理对象的过程</span><br><span class="line">        Enhancer enhancer = new Enhancer();</span><br><span class="line">        // 设置enhancer对象的父类</span><br><span class="line">        enhancer.setSuperclass(HelloService.class);</span><br><span class="line">        // 设置enhancer的回调对象</span><br><span class="line">        enhancer.setCallback(new MyMethodInterceptor());</span><br><span class="line">        // 创建代理对象</span><br><span class="line">        HelloService proxy= (HelloService)enhancer.create();</span><br><span class="line">        // 通过代理对象调用目标方法</span><br><span class="line">        proxy.sayHello();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="四、JDK动态代理和CGLIB的区别-1"><a href="#四、JDK动态代理和CGLIB的区别-1" class="headerlink" title="四、JDK动态代理和CGLIB的区别"></a>四、JDK动态代理和CGLIB的区别</h2><h4 id="4-1-Spring如何选择用JDK还是CGLiB-1"><a href="#4-1-Spring如何选择用JDK还是CGLiB-1" class="headerlink" title="4.1 Spring如何选择用JDK还是CGLiB"></a>4.1 Spring如何选择用JDK还是CGLiB</h4><ul>
+<li>当Bean实现接口时，Spring就会用JDK的动态代理。</li>
+<li>当Bean没有实现接口时，Spring使用CGlib是实现。</li>
+<li>可以强制使用CGlib（在spring配置中加入&lt;aop:aspectj-autoproxy proxy-target-class=”true”/&gt;）</li>
+</ul>
+<h4 id="4-2-字节码生成的区别-1"><a href="#4-2-字节码生成的区别-1" class="headerlink" title="4.2 字节码生成的区别"></a>4.2 字节码生成的区别</h4><ul>
+<li>JDK动态代理只能对实现了接口的类生成代理，而不能针对类。</li>
+<li>CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法，并覆盖其中方法实现增强，但是因为采用的是继承，所以该类或方法最好不要声明成final，对于final类或方法，是无法继承的。</li>
+</ul>
+<h4 id="4-3-效率比较-1"><a href="#4-3-效率比较-1" class="headerlink" title="4.3 效率比较"></a>4.3 效率比较</h4><ul>
+<li>使用CGLib实现动态代理，CGLib底层采用ASM字节码生成框架，使用字节码技术生成代理类，在jdk6之前比使用Java反射效率要高。唯一需要注意的是，CGLib不能对声明为final的方法进行代理，因为CGLib原理是动态生成被代理类的子类。</li>
+<li>在jdk6、jdk7、jdk8逐步对JDK动态代理优化之后，在调用次数较少的情况下，JDK代理效率高于CGLIB代理效率，只有当进行大量调用的时候，jdk6和jdk7比CGLIB代理效率低一点，但是到jdk8的时候，jdk代理效率高于CGLIB代理，<br>总之，每一次jdk版本升级，jdk代理效率都得到提升，而CGLIB代理消息确有点跟不上步伐。</li>
+</ul>
+<hr>
+<p>参考文章：</p>
+<ul>
+<li><a href="https://blog.csdn.net/yhl_jxy/article/details/80635012" target="_blank" rel="noopener">JDK和CGLIB动态代理区别</a></li>
+<li><a href="https://blog.csdn.net/yhl_jxy/article/details/80633194" target="_blank" rel="noopener">CGLIB动态代理实现原理</a></li>
+<li><a href="https://blog.csdn.net/yhl_jxy/article/details/80586785" target="_blank" rel="noopener">JDK动态代理实现原理(jdk8)</a></li>
+<li><a href="http://www.cnblogs.com/jqyp/archive/2010/08/20/1805041.html" target="_blank" rel="noopener">java动态代理（JDK和cglib）</a></li>
 </ul>
 
       
@@ -239,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/30/Java流-IO/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/10/JDK动态代理和CGLIB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -253,18 +332,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/10/JDK动态代理和CGLIB/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JDK动态代理和CGLIB
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/24/Java注解概述/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java注解概述</div>
+    <a href="/2019/03/30/Java流-IO/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java流(IO)</div>
       <i class="icon-circle-right"></i>
     </a>
   
